@@ -96,3 +96,16 @@ h6 {
 .mouse-coords {
     background: lemonchiffon;
 }
+
+/* Google gets in the way of mouse coords */
+.olControlAttribution {
+	bottom: 0px;
+	left: 2px;
+	right: inherit;
+	width: 400px;
+}
+/* conditionally position control differently for Google Maps */
+.olForeignContainer div.olControlMousePosition {
+	bottom: 14px;
+}
+
