@@ -92,3 +92,7 @@ h6 {
 #docs p {
     margin-bottom: 0.5em;
 }
+
+.mouse-coords {
+    background: lemonchiffon;
+}
