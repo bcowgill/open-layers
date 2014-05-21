@@ -22,5 +22,6 @@ cp -R $DATA $DIST
 cp -R $HTML $DIST
 cp -R $CSS $DIST
 cp $LIB/vis.js $DIST/js
+cp $LIB/raster.js $DIST/js
 
 perl -i -pne 's{openlayers(/|/lib/)OpenLayers\.js}{openlayers/OpenLayers.js}xmsg' $DIST/html/index.html
