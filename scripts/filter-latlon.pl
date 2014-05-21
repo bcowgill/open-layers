@@ -7,7 +7,12 @@ my $raScan = [
 	[-10.85272, 49.01426], # lon,lat min
 	[2.63250, 61.58262]    # lon,lat max
 ];
+my $LON = 0;
+my $LAT = 1;
+my $MIN = 0;
+my $MAX = 1;
 my $counter =  2000;
+my $LIMIT = 0;
 
 
 while (my $line = <>)
@@ -22,10 +27,16 @@ while (my $line = <>)
 	{
 		my $lat = $1;
 		my $lon = $2;
-		if ($counter)
+		if (!$LIMIT || $counter)
 		{
-			--$counter;
-			print $line;
+			if ($raScan->[$MIN][$LON] <= $lon
+				&& $lon <= $raScan->[$MAX][$LON]
+				&& $raScan->[$MIN][$LAT] <= $lat
+				&& $lat <= $raScan->[$MAX][$LAT])
+			{
+				--$counter;
+				print $line;
+			}
 		}
 	}
 	else
