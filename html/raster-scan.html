@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Raster Scan a heatmap image using canvas</title>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="../js/raster.js"></script>
+<style>
+body {
+   background-color: black;
+   color: yellow;
+}
+canvas {
+   border: 1px dashed lemonchiffon;
+   background-color: transparent;
+}
+textarea {
+   font-family: ProFontWindows;
+   font-size: 36px;
+   width: 1000px;
+   height: 1000px;
+   resize: both;
+}
+</style>
+</head>
+<body>
+<canvas id="scanner" width="700px" height="400px" data-img="../data/davide-map.v6.png"></canvas>
+<hr/>
+<textarea id="json">
+</textarea>
+</body>
+</html>
