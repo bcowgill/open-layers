@@ -55,9 +55,13 @@ sub in_the_zones
 	return 0;
 }
 
+my $offset = 1;
+my $ip = 0;
 sub r
 {
-	return int(rand(256));
+	$ip = $offset++ if $ip > 255;
+	$offset = 0 if $offset > 255;
+	return $ip++;
 }
 
 sub some_ip
