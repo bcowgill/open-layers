@@ -23,6 +23,7 @@ rm $DIST/data/static_ip*.js
 cp -R $HTML $DIST
 cp -R $CSS $DIST
 cp $LIB/vis.js $DIST/js
+cp $LIB/google-vis.js $DIST/js
 cp $LIB/raster.js $DIST/js
 
 find $DIST -name '*.kate-swp' -delete
