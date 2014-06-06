@@ -8,10 +8,15 @@ CSS=../css
 DATA=../data
 OPENVER=OpenLayers-2.13.1
 OLDIST=$DIST/openlayers
+BRICKDIST=$DIST/brick
 
 [ -d $OLDIST ] && rm -rf $OLDIST
+[ -d $BRICKDIST ] && rm -rf $BRICKDIST
 mkdir -p $OLDIST
+mkdir -p $BRICKDIST
 mkdir -p $DIST/js
+
+cp $LIB/3rdparty/brick/brick.* $BRICKDIST
 
 cp $LIB/3rdparty/$OPENVER/OpenLayers.js $OLDIST
 
