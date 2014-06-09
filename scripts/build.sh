@@ -5,6 +5,7 @@ DIST=../dist
 LIB=../lib
 HTML=../html
 CSS=../css
+IMAGES=../images
 DATA=../data
 OPENVER=OpenLayers-2.13.1
 OLDIST=$DIST/openlayers
@@ -27,6 +28,7 @@ cp -R $DATA $DIST
 rm $DIST/data/static_ip*.js
 cp -R $HTML $DIST
 cp -R $CSS $DIST
+cp -R $IMAGES $DIST
 cp $LIB/vis.js $DIST/js
 cp $LIB/google-vis.js $DIST/js
 cp $LIB/raster.js $DIST/js
